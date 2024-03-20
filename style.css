@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'sans-serif';
+}
+body {
+    background: rgb(27, 3, 6);
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background-color: transparent;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.logo {
+    color: rgb(176, 79, 79);
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover {
+    color: #671818;
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5)), url('https://cdn.discordapp.com/attachments/914931081130696734/1219373481498775705/ezgif-6-02ba2f71f1.gif?ex=660b110c&is=65f89c0c&hm=9513c9b5f0dbbab612ef9cab179fe6ebdcbaecd3eeda295ae0e73632e56e41da&') center/cover;
+    position: relative;
+    z-index: 1;
+}
+
+.home::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)); 
+}
+
+
+.home-content {
+    max-width: 600px;
+    position: relative;
+    z-index: 2;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    color: white;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+}
+
+.info {
+    flex-grow: 1;
+}
+
+.about,
+.projects,
+.contacts {
+    background-color: #320c0c;
+    padding: 5vw;
+    border-radius: 20px;
+    margin-top: 10vh;
+    margin: 0 auto;
+    margin-top: 50px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    max-width: calc(100vw - 200px); 
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about-content h4 {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+}
+
+
+
+.about-info {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.info {
+    margin-top: -10;
+}
+
+
+.links a{
+    display: inline-flex;
+    width: 150px;
+    height: 100%;
+    background: #671818;
+    border-radius: 8px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 19px;
+    border: 1px solid #fff;
+    justify-content: center;
+    color: #320c0c;
+    transition: background-color 0.3s ease; 
+}
+
+.links a:hover {
+    background-color: #df5454;
+}
+
+footer {
+    margin-top: 40px;
+    background-color: #320c0c;
+    color: white;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacts-content {
+    margin-bottom: 20px;
+}
+
+.contacts-content h4 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; 
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.pr1, .pr2 {
+    width: calc(25% - 20px);
+    margin-bottom: 20px; 
+    padding-right: 20px; 
+    box-sizing: border-box;
+}
+
+
+
+.pr1 img {
+    margin-top: 10px;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.pr2 img {
+    margin-top: 10px;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.projects-content h4 {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+}
+
+
+
+.buttonpr {
+    background-color: #5a2323;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    display: flex; 
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.buttonpr a {
+    text-decoration: none;
+    color: white;
+}
+
+.buttonpr:hover {
+    background-color: #df5454;
+}

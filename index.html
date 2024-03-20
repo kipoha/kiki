@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Kipoha</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#home" class="logo">Kipoha</a>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#projects">Projects</a>
+        </nav>
+    </header>
+
+    <section id="home" class="home">
+        <div class="home-content">
+            <div class="content-left">
+                <h1>Kipoha</h1>
+                <h3>Bot Developer</h3>
+                <div class="links">
+                    <a href="https://discord.gg/WzVyztYecc">My Server</a>
+                    <a href="https://discord.com/api/oauth2/authorize?client_id=1193116005820530788&permissions=40138683001680&scope=bot">My Bot</a>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="about" class="about">
+        <div class="about-content">
+            <h4 class="about-title">About Me</h4>
+            <div class="about-info">
+                <img src="https://cdn.discordapp.com/avatars/914930212297392129/f41a25b9264ad195e0bdd1bc6c2ff3e0.png?size=1024" alt="Avatar" class="avatar">
+                <div class='info'>
+                    <p>Hello!</p>
+                    <p>I'm Kipoha, I'm discord bot and backend developer in the Python programming language.</p>
+                    <p.=>I'm still a beginner and constantly learning new things.</p>
+                    <p>I also make different bot or interface designs.</p>
+                    <p>I’m also learning 3 languages ​​(typescript, javascript, java).</p>
+                    <div class="logoimg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="projects" class="projects">
+        <div class="projects-content">
+            <h4>Projects</h4>
+            <div class="projects-grid">
+                <div class="pr1">
+                    <img src="https://cdn.discordapp.com/avatars/1193116005820530788/bea0dc7ffbb33d8c1ff169c64ad6afc7.webp?size=4096" alt="Project 1">
+                    <div class="buttonpr">
+                        <a href="https://discord.com/api/oauth2/authorize?client_id=1193116005820530788&permissions=40138683001680&scope=bot">Menero Bot</a>
+                    </div>
+                </div>
+                <div class="pr2">
+                    <img src="https://cdn.discordapp.com/avatars/1193116005820530788/bea0dc7ffbb33d8c1ff169c64ad6afc7.webp?size=4096" alt="Project 2">
+                    <div class="buttonpr">
+                        <a href="https://discord.gg/WzVyztYecc">Menero Server</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+                    <h4>Contact</h4>
+                        <p>Discord: kipoha, Telegram: @kipoha, VK:kipoha</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
