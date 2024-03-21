@@ -11,6 +11,7 @@
 <body>
     <header class="header">
         <a href="#home" class="logo">Kipoha</a>
+        <button class="menu-toggle">&#9776;</button>
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
             <a href="#about">About Me</a>
@@ -76,11 +77,14 @@
     <footer>
         <div class="footer-content">
                     <h4>Contact</h4>
-                        <p>Discord: kipoha, Telegram: @kipoha, VK:kipoha</p>
+                        <p>Discord: kipoha</p>
         </div>
     </footer>
 
     <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.navbar').classList.toggle('active');
+        });
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();

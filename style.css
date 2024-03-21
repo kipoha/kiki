@@ -346,34 +346,40 @@ footer {
     background-color: #df5454;
 }
 
-/* Стили для раздела "About Me" на мобильных устройствах */
 @media (max-width: 768px) {
     .about-info {
-        flex-direction: column; /* Устанавливаем направление flex на колонку */
-        align-items: center; /* Выравниваем элементы по центру */
+        flex-direction: column;
+        align-items: center;
     }
 
     .avatar {
-        margin-bottom: 20px; /* Добавляем отступ между аватаром и текстом */
+        margin-bottom: 20px;
     }
 }
 
-/* Стили для раздела "Projects" на мобильных устройствах */
 @media (max-width: 768px) {
     .projects-grid {
-        flex-wrap: wrap; /* Устанавливаем перенос элементов на новую строку */
-        justify-content: center; /* Выравниваем элементы по центру */
-        margin: 0 10px; /* Уменьшаем боковые отступы */
+        flex-wrap: wrap; 
+        justify-content: flex-start; 
+        margin: 0 auto;
+        max-width: 100%;
     }
 
     .pr1, .pr2 {
-        width: calc(50% - 10px); /* Устанавливаем ширину проектов на половину экрана с учетом отступов */
-        margin-right: 20px; /* Добавляем правый отступ для проектов, кроме последнего в строке */
-        margin-bottom: 20px; /* Добавляем отступ снизу для проектов */
+        width: calc(50% - 10px); 
+        margin-right: 20px; 
+        margin-bottom: 20px;
     }
 
     .pr2 {
-        margin-right: 0; /* Убираем правый отступ для последнего проекта в строке */
+        margin-right: 0;
+    }
+
+    @media (max-width: 425px) {
+        .pr1, .pr2 {
+            width: 100%; 
+            margin-right: 0; 
+        }
     }
 }
 
