@@ -42,6 +42,77 @@ body {
     color: #671818;
 }
 
+.menu-toggle {
+    display: none;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    margin-left: 35px;
+}
+
+@media (max-width: 520px) {
+    .menu-toggle {
+        display: block;
+        color: white; 
+        background: none;
+        border: none; 
+        font-size: 24px; 
+        cursor: pointer;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+    }
+
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #555;
+        display: block;
+    }
+
+    .navbar a:last-child {
+        border-bottom: none;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        transition: opacity 0.3s ease-in-out; 
+        opacity: 0; 
+        pointer-events: none;
+    }
+
+    .navbar {
+        backdrop-filter: blur(10px);
+    }
+    .navbar.active {
+        opacity: 1; 
+        pointer-events: auto; 
+    }
+}
+
+
+
 .home {
     height: 100vh;
     display: flex;
@@ -100,6 +171,18 @@ body {
     max-width: calc(100vw - 200px); 
 }
 
+@media (max-width: 768px) {
+    .about,
+    .projects,
+    .contacts {
+        padding: 2vw;
+        margin-top: 5vh; 
+        margin-left: auto; 
+        margin-right: auto;
+        max-width: 90%; 
+    }
+}
+
 .about-content {
     display: flex;
     justify-content: center;
@@ -117,16 +200,16 @@ body {
 
 .about-info {
     display: flex;
-    align-items: center;
     color: #fff;
 }
 
 .avatar {
-    border-radius: 50%;
+    border-radius: 20%;
     width: 150px;
     height: 150px;
     object-fit: cover;
     margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 .info {
@@ -179,7 +262,7 @@ footer {
     margin: 0;
 }
 
-.projects-grid {
+/* .projects-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start; 
@@ -193,8 +276,35 @@ footer {
     margin-bottom: 20px; 
     padding-right: 20px; 
     box-sizing: border-box;
+} */
+
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0 auto; 
+    max-width: 1000px;
+    margin-bottom: 20px;
 }
 
+.pr1, .pr2, .pr3, .pr4 {
+    width: calc(25% - 20px); 
+    margin-right: 20px;
+    margin-bottom: 20px; 
+}
+
+.pr4 {
+    margin-right: 0;
+}
+
+@media (max-width: 768px) {
+    .pr1, .pr2, .pr3, .pr4 {
+        width: calc(50% - 20px);
+    }
+    .pr3, .pr4 {
+        margin-right: 0;
+    }
+}
 
 
 .pr1 img {
@@ -235,3 +345,35 @@ footer {
 .buttonpr:hover {
     background-color: #df5454;
 }
+
+/* Стили для раздела "About Me" на мобильных устройствах */
+@media (max-width: 768px) {
+    .about-info {
+        flex-direction: column; /* Устанавливаем направление flex на колонку */
+        align-items: center; /* Выравниваем элементы по центру */
+    }
+
+    .avatar {
+        margin-bottom: 20px; /* Добавляем отступ между аватаром и текстом */
+    }
+}
+
+/* Стили для раздела "Projects" на мобильных устройствах */
+@media (max-width: 768px) {
+    .projects-grid {
+        flex-wrap: wrap; /* Устанавливаем перенос элементов на новую строку */
+        justify-content: center; /* Выравниваем элементы по центру */
+        margin: 0 10px; /* Уменьшаем боковые отступы */
+    }
+
+    .pr1, .pr2 {
+        width: calc(50% - 10px); /* Устанавливаем ширину проектов на половину экрана с учетом отступов */
+        margin-right: 20px; /* Добавляем правый отступ для проектов, кроме последнего в строке */
+        margin-bottom: 20px; /* Добавляем отступ снизу для проектов */
+    }
+
+    .pr2 {
+        margin-right: 0; /* Убираем правый отступ для последнего проекта в строке */
+    }
+}
+
