@@ -118,7 +118,7 @@ body {
     display: flex;
     align-items: center;
     padding: 0 10%;
-    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5)), url('https://cdn.discordapp.com/attachments/914931081130696734/1219373481498775705/ezgif-6-02ba2f71f1.gif?ex=660b110c&is=65f89c0c&hm=9513c9b5f0dbbab612ef9cab179fe6ebdcbaecd3eeda295ae0e73632e56e41da&') center/cover;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5)), url('backgroundgif.gif') center/cover;
     position: relative;
     z-index: 1;
 }
